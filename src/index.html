@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ABISSO — Il Faro di Kingsport</title>
+    <script type="module" src="/main.js" defer></script>
+  </head>
+
+  <body>
+    <div class="wrap">
+      <div class="cabinet">
+        <span class="rivet tl"></span><span class="rivet tr"></span>
+        <span class="rivet bl"></span><span class="rivet br"></span>
+        <div class="cabinet-inner">
+
+          <div class="titlebar">
+            <div class="brand">ABISS<em>O</em></div>
+            <div class="chapter" id="chapter-label">Cap. I — Il Faro di Kingsport</div>
+          </div>
+
+          <div class="stage">
+            <div class="viewport-wrap">
+              <div class="scene-inner">
+                <pre class="scene" id="scene"></pre>
+                <div class="hotspots" id="hotspots"></div>
+              </div>
+              <p class="caption-hint">passa il mouse su un oggetto della stanza, scegli un'azione a destra, poi clicca — <kbd>guarda</kbd> è selezionata di default</p>
+            </div>
+
+            <aside class="sidebar">
+              <div class="card">
+                <h3>Investigatore</h3>
+                <div class="inv-name">Evelyn Marsh</div>
+                <div class="inv-role">giornalista, 29 anni</div>
+                <div class="stat-grid">
+                  <div class="stat"><div class="k">FOR</div><div class="v">50</div></div>
+                  <div class="stat"><div class="k">COS</div><div class="v">60</div></div>
+                  <div class="stat"><div class="k">DES</div><div class="v">65</div></div>
+                  <div class="stat"><div class="k">INT</div><div class="v">75</div></div>
+                  <div class="stat"><div class="k">EDU</div><div class="v">80</div></div>
+                  <div class="stat"><div class="k">POT</div><div class="v">55</div></div>
+                </div>
+                <div class="meter">
+                  <div class="meter-label"><span>Punti Ferita</span><span class="num">11 / 12</span></div>
+                  <div class="meter-track"><div class="meter-fill" style="width:92%"></div></div>
+                </div>
+                <div class="meter">
+                  <div class="meter-label"><span>Sanità Mentale</span><span class="num" id="san-num">51 / 75</span></div>
+                  <div class="meter-track"><div class="meter-fill san" id="san-fill" style="width:68%"></div></div>
+                </div>
+              </div>
+
+              <div class="card">
+                <h3>Inventario</h3>
+                <div class="inv-grid">
+                  <div class="inv-slot filled" title="Diario del professore">DIA</div>
+                  <div class="inv-slot filled" title="Lanterna a olio">LAN</div>
+                  <div class="inv-slot filled" title="Bussola d'ottone">BUS</div>
+                  <div class="inv-slot empty" id="inv-slot-key" title="Slot vuoto">···</div>
+                </div>
+              </div>
+
+              <div class="card" style="border-bottom:0; flex:1;">
+                <h3>Indizi (<span class="clue-count" id="clue-count">1</span>)</h3>
+                <ul class="clue-list" id="clue-list">
+                  <li>Lettera anonima ricevuta a Kingsport</li>
+                </ul>
+              </div>
+            </aside>
+          </div>
+
+          <div class="footer">
+            <div class="log" id="log"></div>
+            <div class="verbs" id="verbs">
+              <button class="verb-btn active" data-verb="guarda">◎ Guarda</button>
+              <button class="verb-btn" data-verb="usa">✦ Usa</button>
+              <button class="verb-btn" data-verb="prendi">✋ Prendi</button>
+              <button class="verb-btn" data-verb="parla">✎ Parla</button>
+              <button class="verb-btn" data-verb="vai">→ Vai</button>
+            </div>
+          </div>
+
+          <div class="statusline" id="statusline">pronta.</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
